@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OAGRO FARM</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <a href="index.html"><a href="welcome.html">OAGRO FARM</a>
+                <img style="width: 100px; height: 70px;" src="https://c1.staticflickr.com/5/4687/39149163132_eaa4cef3a6.jpg" alt="">
+            </a>
+
+            <div class="hamburger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+
+            <div class="nav__link hide">
+                <a href="home.html">HOME</a>
+                <a href="about.html">ABOUT</a>
+                <a href="gallery.html">GALLERY</a>
+                <a href="livestock.html">LIVESTOCK</a>
+                <a href="#">CONTACT US</a>
+            </div>
+        </nav>
+    </header>
+    <h1 align="center">
+        <font face="lato" size="7">
+            WELCOME TO <br>
+            OAGRO FARMS WEBSITE, <br> WE ARE HAPPY TO HAVE YOU!!!!
+</body>
+
+</html>
+
+<script>
+    const hamburger = document.querySelector('.hamburger');
+const navLink = document.querySelector('.nav__link');
+
+hamburger.addEventListener('click', () => {
+    navLink.classList.toggle('hide');
+});
+</script>
+
+<style>
+    * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    background-image:linear-gradient(rgba(15, 14, 14, 0.75),rgba(10, 8, 8, 0.75)), url(https://t3.ftcdn.net/jpg/01/33/74/06/360_F_133740640_GBiSpmHwdgJlsz1ts42AewxZ5mVMzPI5.jpg);
+        width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+}
+
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    /* text-transform: uppercase; */
+}
+
+
+/* nav styles */
+
+h1{
+    color: rgb(253, 252, 252);
+    margin-top: 120px;
+}
+.nav {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.hamburger {
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    display: block;
+    width: 40px;
+    height: 5px;
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+.nav__link {
+    position: fixed;
+    width: 100%;
+    top: 4.5rem;
+    background-color: #01a2a8;
+}
+
+.nav__link a {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.nav__link a:hover {
+    color: #4307f9;
+}
+
+.hide {
+    display: none;
+}
+
+@media screen and (min-width: 600px) {
+    .nav__link {
+        display: block;
+        position: static;
+        width: auto;
+        margin-right: 20px;
+        background: none;
+    }
+    .nav__link a {
+        display: inline-block;
+        padding: 15px 20px;
+    }
+    .hamburger {
+        display: none;
+    }
+}
+</style>
